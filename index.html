@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tetris</title>
+  </head>
+
+  <body>
+    <div id="game">
+      <div id="board">
+        <div>
+          <p>Level:</p>
+          <button id="level-dec">-</button>
+          <span id="level">0</span>
+          <button id="level-inc">+</button>
+        </div>
+        <div>
+          <p>Score:</p>
+          <span id="score">0</span>
+        </div>
+      </div>
+      <div id="game-label">Tetris</div>
+      <div class="container">
+        <div class="grid">
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <!-- <div class="taken"></div>
+        <div class="taken"></div>
+        <div class="taken"></div>
+        <div class="taken"></div> -->
+        </div>
+      </div>
+
+      <div id="controls">
+        <button id="move-left"><-</button>
+        <button id="move-down">V</button>
+        <button id="move-right">-></button>
+      </div>
+    </div>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

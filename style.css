@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding-top: 20px;
+  /* display: flex; */
+}
+
+.grid {
+  width: 150px;
+  height: 500px;
+  /* padding: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  /* padding-top: 20px; */
+  background-color: #fff;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.grid div {
+  height: 50px;
+  width: 50px;
+}
+
+#board {
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ball {
+  /* background-color: blue; */
+  border-radius: 50%;
+}
+
+#controls button {
+  padding: 19px;
+}
+
+#controls {
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: stretch; */
+  /* width: 160px; */
+}
+
+.taken {
+  /* background-color: chartreuse; */
+}
+
+#game-label {
+  width: 130px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  position: absolute;
+  top: 120px;
+  left: 45vw;
+}
