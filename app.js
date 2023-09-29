@@ -205,9 +205,12 @@ function addScore() {
 
       if (
         (prevCol || currCol || nextCol) &&
-        (prevCol === currCol) & (prevCol === nextCol)
+        prevCol === currCol &&
+        currCol === nextCol
       ) {
         score += 10;
+        scoreDisplay.innerHTML = score;
+
         squares[j - 3].style.backgroundColor = "";
         squares[j].style.backgroundColor = "";
         squares[j + 3].style.backgroundColor = "";
