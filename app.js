@@ -248,6 +248,6 @@ timer = setInterval(moveDown, time);
 nextRandom = Math.floor(Math.random() * 4);
 
 // Add textContent on squares for reference
-for (let i = 0; i < squares.length; i++) {
-  squares[i].textContent = i;
-}
+// for (let i = 0; i < squares.length; i++) {
+//   squares[i].textContent = i;
+// }
