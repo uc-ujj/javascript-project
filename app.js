@@ -172,18 +172,19 @@ function addScore() {
           squares[row[1]].style.backgroundColor &&
         squares[row[0]].style.backgroundColor ===
           squares[row[2]].style.backgroundColor
-      ) {
-        score += 10;
-        scoreDisplay.innerHTML = score;
-        row.forEach((index) => {
-          squares[index].classList.remove("taken");
-          // squares[index].classList.remove("ball");
-          squares[index].style.backgroundColor = "";
-        });
-        const squaresRemoved = squares.splice(i, width);
-        squares = squaresRemoved.concat(squares);
-        squares.forEach((cell) => grid.append(cell));
-      }
+      )
+        setTimeout(() => {
+          score += 10;
+          scoreDisplay.innerHTML = score;
+          row.forEach((index) => {
+            squares[index].classList.remove("taken");
+            // squares[index].classList.remove("ball");
+            squares[index].style.backgroundColor = "";
+          });
+          const squaresRemoved = squares.splice(i, width);
+          squares = squaresRemoved.concat(squares);
+          squares.forEach((cell) => grid.append(cell));
+        }, 100);
     }
   }
 
@@ -210,14 +211,15 @@ function addScore() {
       ) {
         score += 10;
         scoreDisplay.innerHTML = score;
+        setTimeout(() => {
+          squares[j - 3].style.backgroundColor = "";
+          squares[j].style.backgroundColor = "";
+          squares[j + 3].style.backgroundColor = "";
 
-        squares[j - 3].style.backgroundColor = "";
-        squares[j].style.backgroundColor = "";
-        squares[j + 3].style.backgroundColor = "";
-
-        squares[j - 3].classList.remove("taken");
-        squares[j].classList.remove("taken");
-        squares[j + 3].classList.remove("taken");
+          squares[j - 3].classList.remove("taken");
+          squares[j].classList.remove("taken");
+          squares[j + 3].classList.remove("taken");
+        }, 100);
       }
     }
   }
