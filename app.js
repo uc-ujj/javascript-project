@@ -29,7 +29,7 @@ let nextRandom = 0;
 let score = 0;
 const colors = ["yellow", "skyblue", "purple", "green"];
 
-let currentPosition = 1;
+let currentPosition = -2;
 
 //randomly select a Number for Color
 let random = Math.floor(Math.random() * 4);
@@ -119,7 +119,7 @@ function freeze() {
     random = nextRandom;
     nextRandom = Math.floor(Math.random() * 4);
 
-    currentPosition = 1;
+    currentPosition = -2;
 
     draw();
     addScore();
@@ -228,9 +228,9 @@ function addScore() {
 //end game
 function gameOver() {
   if (
-    squares[6].classList.contains("taken") ||
-    squares[7].classList.contains("taken") ||
-    squares[8].classList.contains("taken")
+    squares[3].classList.contains("taken") ||
+    squares[4].classList.contains("taken") ||
+    squares[5].classList.contains("taken")
   ) {
     // if (row.every((index) => squares[index].classList.contains("taken"))) {
     //   // const row = [180, 181, 182, 183, 184, 185, 186, 187, 188, 189];
@@ -248,6 +248,6 @@ timer = setInterval(moveDown, time);
 nextRandom = Math.floor(Math.random() * 4);
 
 // Add textContent on squares for reference
-// for (let i = 0; i < squares.length; i++) {
-//   squares[i].textContent = i;
-// }
+for (let i = 0; i < squares.length; i++) {
+  squares[i].textContent = i;
+}
