@@ -226,22 +226,48 @@ function addScore() {
 }
 
 //end game
+// function gameOver() {
+//   if (
+//     squares[3].classList.contains("taken") ||
+//     squares[4].classList.contains("taken") ||
+//     squares[5].classList.contains("taken")
+//   ) {
+//     // if (row.every((index) => squares[index].classList.contains("taken"))) {
+//     //   // const row = [180, 181, 182, 183, 184, 185, 186, 187, 188, 189];
+//     // }
+//     scoreDisplay.innerHTML = "Game Over";
+//     clearInterval(timer);
+//     setTimeout(() => {
+//       alert(`You scored: ${score}`);
+//     }, 200);
+//   }
+// }
+
+//end game
 function gameOver() {
   if (
     squares[3].classList.contains("taken") ||
     squares[4].classList.contains("taken") ||
     squares[5].classList.contains("taken")
   ) {
-    // if (row.every((index) => squares[index].classList.contains("taken"))) {
-    //   // const row = [180, 181, 182, 183, 184, 185, 186, 187, 188, 189];
-    // }
     scoreDisplay.innerHTML = "Game Over";
     clearInterval(timer);
     setTimeout(() => {
-      alert(`You scored: ${score}`);
+      // Show the modal
+      const gameOverModal = document.getElementById("gameOverModal");
+      const finalScore = document.getElementById("finalScore");
+      gameOverModal.style.display = "block";
+      finalScore.textContent = `You scored: ${score}`;
     }, 200);
   }
 }
+
+// Get the modal close button and add an event listener to it
+const closeModalBtn = document.getElementById("closeModalBtn");
+closeModalBtn.addEventListener("click", () => {
+  const gameOverModal = document.getElementById("gameOverModal");
+  gameOverModal.style.display = "none";
+});
 
 draw();
 timer = setInterval(moveDown, time);
