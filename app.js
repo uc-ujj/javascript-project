@@ -16,13 +16,6 @@ for (let i = 0; i < 30; i++) {
 
 let squares = Array.from(document.querySelectorAll(".grid div"));
 
-// squares[0].style.borderBottom = "1px solid black";
-// squares[0].style.borderRadius = "0px";
-// squares[1].style.borderRadius = "0px";
-// squares[1].style.borderBottom = "1px solid black";
-// squares[2].style.borderBottom = "1px solid black";
-// squares[2].style.borderRadius = "0px";
-
 const width = 3;
 let nextRandom = 0;
 
@@ -37,16 +30,11 @@ let current = [3];
 
 //draw the Ball
 function draw() {
-  // squares[currentPosition + 3].classList.add("ball");
-  // if (currentPosition < 3)
-  //   squares[currentPosition].style.backgroundColor = colors[random];
   squares[currentPosition + 3].style.backgroundColor = colors[random];
 }
 
 //undraw the Ball
 function undraw() {
-  // if (currentPosition < 3) squares[currentPosition].style.backgroundColor = "";
-  // squares[currentPosition + 3].classList.remove("ball");
   squares[currentPosition + 3].style.backgroundColor = "";
 }
 
@@ -69,10 +57,8 @@ let currLevel = 0;
 
 // Increasing the Level
 function increaseLevel() {
-  // let currLevel = Number(level.textContent);
   currLevel += 1;
   level.textContent = currLevel;
-  // console.log(level.textContent);
 
   //   Increase Speed
   clearInterval(timer);
@@ -81,7 +67,6 @@ function increaseLevel() {
 }
 
 function decreaseLevel() {
-  // let currLevel = Number(level.textContent);
   if (currLevel > 0) {
     currLevel -= 1;
     level.textContent = currLevel;
@@ -106,7 +91,6 @@ moveDownBtn.addEventListener("click", () => moveDown());
 function moveDown() {
   undraw();
   currentPosition += width;
-  // console.log(currentPosition);
   draw();
   freeze();
 }
@@ -227,24 +211,6 @@ function addScore() {
 }
 
 //end game
-// function gameOver() {
-//   if (
-//     squares[3].classList.contains("taken") ||
-//     squares[4].classList.contains("taken") ||
-//     squares[5].classList.contains("taken")
-//   ) {
-//     // if (row.every((index) => squares[index].classList.contains("taken"))) {
-//     //   // const row = [180, 181, 182, 183, 184, 185, 186, 187, 188, 189];
-//     // }
-//     scoreDisplay.innerHTML = "Game Over";
-//     clearInterval(timer);
-//     setTimeout(() => {
-//       alert(`You scored: ${score}`);
-//     }, 200);
-//   }
-// }
-
-//end game
 function gameOver() {
   if (
     squares[3].classList.contains("taken") ||
@@ -273,8 +239,3 @@ closeModalBtn.addEventListener("click", () => {
 draw();
 timer = setInterval(moveDown, time);
 nextRandom = Math.floor(Math.random() * 4);
-
-// Add textContent on squares for reference
-// for (let i = 0; i < squares.length; i++) {
-//   squares[i].textContent = i;
-// }
