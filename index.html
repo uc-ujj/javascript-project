@@ -10,18 +10,22 @@
     <div id="gameOverModal" class="modal">
       <div class="modal-content">
         <h2>Game Over</h2>
+        <div id="scoreContainer"></div>
         <p id="finalScore"></p>
-        <button id="closeModalBtn">Close</button>
+        <div id="buttonContainer">
+          <button id="closeModalBtn">Close</button>
+        </div>
       </div>
     </div>
     <div id="game">
       <div id="board">
-        <div>
+        <div id="level-container">
           <p>Level:</p>
           <button id="level-dec">-</button>
           <span id="level">0</span>
           <button id="level-inc">+</button>
         </div>
+        <div id="seperator"></div>
         <div>
           <p>Score:</p>
           <span id="score">0</span>

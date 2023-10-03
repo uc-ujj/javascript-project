@@ -65,22 +65,23 @@ document.addEventListener("keyup", control);
 let time = 1000;
 let timer;
 
+let currLevel = 0;
+
 // Increasing the Level
 function increaseLevel() {
-  let currLevel = Number(level.textContent);
+  // let currLevel = Number(level.textContent);
   currLevel += 1;
   level.textContent = currLevel;
-  //   console.log(level.textContent);
+  // console.log(level.textContent);
 
   //   Increase Speed
   clearInterval(timer);
   time -= 200;
   timer = setInterval(moveDown, time);
-  22;
 }
 
 function decreaseLevel() {
-  let currLevel = Number(level.textContent);
+  // let currLevel = Number(level.textContent);
   if (currLevel > 0) {
     currLevel -= 1;
     level.textContent = currLevel;
