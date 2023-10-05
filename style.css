@@ -11,7 +11,7 @@ body {
 .grid {
   width: 150px;
   height: 500px;
-  margin-left: 80px;
+  margin-left: 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,8 +27,8 @@ body {
 
 #board {
   padding: 10px;
-  border: 2px solid black;
-  width: 300px;
+  /* border: 2px solid black; */
+  width: 250px;
   display: flex;
   justify-content: space-between;
 }
@@ -47,7 +47,7 @@ body {
 
 #controls {
   display: flex;
-  margin-left: 80px;
+  margin-left: 30px;
 }
 
 .modal {
@@ -67,7 +67,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -79,4 +79,16 @@ body {
 #buttonContainer {
   margin-left: 60px;
   align-self: flex-end;
+}
+
+#score-board {
+  width: 100px;
+  margin: 0 20px;
+  padding: 0 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#level-container > button {
+  font-size: 1.5em;
 }
